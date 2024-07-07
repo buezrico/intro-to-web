@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 5rem 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.left {
+  width: 40%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rico {
+  color: #fb5e56;
+  font-size: 2.5rem;
+}
+
+.hire-btn {
+  background-color: #fb5e56;
+  color: white;
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  margin-top: 3rem;
+  cursor: pointer;
+  border: 2px solid #fb5e56;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(-4deg);
+  border-radius: 5px;
+}
+.hire-btn:hover {
+  background-color: transparent;
+  color: #fb5e56;
+  transform: rotate(0);
+}
+
+.right {
+  width: 40%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  animation: blob 3s linear infinite;
+}
+
+@keyframes blob {
+  0%,
+  100% {
+    border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+  }
+  33% {
+    border-radius: 72% 28% 48% 48% / 28% 28% 72% 72%;
+  }
+  66% {
+    border-radius: 100% 56% 56% 100% / 100% 100% 56% 56%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 90%;
+  }
+}
